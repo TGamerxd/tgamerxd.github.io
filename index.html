@@ -1,0 +1,153 @@
+<!-- dont judge my code, ik its badly organised. btw, STOP READING -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TGamerXD | PortFolio</title>
+    <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+    <!--i asked chatgpt to help here xd-->
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script> <!--this was extremely helpful-->
+    <script src="https://kit.fontawesome.com/e548e16d4f.js" crossorigin="anonymous"></script> <!--icons-->
+</head>
+
+<body>
+    <div id="particles-js"></div>
+    <script>
+        particlesJS.load('particles-js', 'particles.json', function () {
+            console.log('particles.js successfullt loaded - initialised!');
+        });
+    </script> <!--particle.js background-->
+    <header class="navbarhead">
+        <a href="#" class="logo koolglitch">TGamer<span class="xd">XD</span></a>
+        <ul class="navbarlist">
+            <li><a href="#home" class="navbaritems">Home</a></li>
+            <li><a href="#about" class="navbaritems">About</a></li>
+            <li><a href="#skills" class="navbaritems">Skills</a></li>
+            <li><a href="https://youtu.be/dQw4w9WgXcQ" class="navbaritems">Source</a></li>
+            <li><a href="#" class="navbaritems"><i class="fas fa-bars"></i></a></li>
+        </ul>
+    </header>
+    <script type="text/javascript">
+        window.addEventListener("scroll", function () {
+            var header = document.querySelector("header");
+            header.classList.toggle("sticky", window.scrollY > 40)
+        })
+    </script> <!--sticky navbar script-->
+
+    <section class="home" id="home">
+        <div class="home-text">
+            <div class="intro-text">I am TGamerXD</div>
+            <div class="type-text"><span class="typing"></span></div>
+            <script>
+                var typed = new Typed(".typing", {
+                    strings: ["IT Enthusiast ", "Programmer ", "Musician ", "Gamer ", " Python Developer", "Web Developer"],
+                    typeSpeed: 100,
+                    backSpeed: 50,
+                    loop: true
+                })
+            </script> <!--typing animation script-->
+            <!-- <div class="caption-text" id="btn">About</div> -->
+            <div class="dev-text">Still working on this... any suggestions, give me on discord</div>
+            <a href="#about" class="caption-text" id="btn">About</a>
+        </div>
+        <input type="text" value="TGamerXD#6728" id="discordtag" style="opacity: calc(0);">
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-head koolglitch">About Me</div>
+        <div class="about-content">
+            <div class="about-intro"></div>
+            <script>
+                var typed1 = new Typed(".about-intro", {
+                    strings: ["Hello!^1000 I'm Trijal, 'aka' TGamerXD,^1000 a passionate Web Developer and Python Developer from India.      \n^1000With over 1 and a half year experience in Web Development,^1000 and also Intermediate Level in Python.\n\n\n^1000I am an IT Enthusiast^500, having a grasp knowledge in some other languages,^1000 like Java.\n\nAlso A SWEATY GAMER!!!\n^1000~also a game developer, kinda"],
+                    typeSpeed: 40,
+                    showCursor: false,
+                    contentType: 'html',
+                })
+            </script>
+        </div>
+    </section>
+
+    <section class="skills" id="skills">
+        <div class="skills-head koolglitch">My Skills</div>
+        <div class="skillsbar">
+            <div class="skillscard">
+                <div class="percent" style="--clr:#04fc43;--num:80;">
+                    <div class="dot"></div>
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="percentnum">
+                        <h2>80<span>%</span></h2>
+                        <p>HTML</p>
+                        <p>CSS</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skillscard">
+                <div class="percent" style="--clr:#fee800;--num:90;">
+                    <div class="dot"></div>
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="percentnum">
+                        <h2>90<span>%</span></h2>
+                        <p>GAMING</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skillscard">
+                <div class="percent" style="--clr:#ff00be;--num:45;">
+                    <div class="dot"></div>
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="percentnum">
+                        <h2>45<span>%</span></h2>
+                        <p>JAVA</p>
+                    </div>
+                </div>
+            </div>
+            <div class="skillscard">
+                <div class="percent" style="--clr:#06ccff;--num:75;">
+                    <div class="dot"></div>
+                    <svg>
+                        <circle cx="70" cy="70" r="70"></circle>
+                        <circle cx="70" cy="70" r="70"></circle>
+                    </svg>
+                    <div class="percentnum">
+                        <h2>75<span>%</span></h2>
+                        <p>PYTHON</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <footer>
+        <p>
+            Copyright &copy; 2023-2024 | All Rights Reserved | Made by <a href="#home" class="fotertext">TGamerXD</a> |
+            <a href="https://github.com/TGamerxd"><i class="fab fa-github"></i></a> <i class="fab fa-discord" onclick="DiscordTag()" style="cursor: pointer;"></i> <a href="https://www.instagram.com/tgamerxd_/"><i class="fab fa-instagram"></i></a>
+        </p>
+    </footer>
+
+    <script src="./particles/particles.js"></script> <!-- particle.js -->
+    <script src="./particles/app.js"></script> <!-- app.js -->
+    <script>
+        function DiscordTag() {
+            var discord = document.getElementById("discordtag");
+            discord.select();
+            document.execCommand("copy");
+            alert("Discord Tag copied to Clipboard\nTGamerXD#6728");
+        }
+    </script>
+</body>
+
+</html>

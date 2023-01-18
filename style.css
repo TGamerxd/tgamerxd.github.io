@@ -1,0 +1,360 @@
+/* Don't read, you cannot understand how do I do this stuff, it is a lot scuffed. ok */
+
+/* fonts, there are many of them, some unsued too */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Sofia+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+/* navbar styling - it also has a script */
+.navbarhead {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.3s;
+    padding: 20px 50px;
+    z-index: 10;
+}
+
+.sticky {
+    padding: 10px 50px;
+    background: rgba(255, 255, 255, 0.726);
+}
+
+.logo {
+    position: relative;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.6s;
+}
+
+.koolglitch {
+    text-shadow: 2px 2px 0px aqua, -2px -2px 0px red;
+}
+.xd{
+    font-family: 'Rubik Glitch', sans-serif;
+}
+
+.navbarlist {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbarlist li {
+    position: relative;
+    list-style: none;
+}
+
+.navbaritems {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.navbarmenu {
+    position: relative;
+    margin: 0 15px;
+    text-decoration: none;
+    color: #fff;
+    letter-spacing: 2px;
+}
+
+.sticky .navbaritems,
+.sticky .logo {
+    color: #000;
+}
+
+.navbaritems:hover {
+    transition: 0.3;
+    cursor: pointer;
+    text-shadow: 2px 2px 0px aqua, -2px -2px 0px red;
+}
+
+/* home styling */
+.home {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+}
+
+.home-text {
+    color: white;
+    font-family: "Ubuntu", sans-serif;
+    background-color: transparent;
+    z-index: 2;
+    margin-top: 40px;
+    margin-left: 100px;
+    margin-bottom: 40px;
+}
+
+.home-text .intro-text {
+    text-shadow: 2px 2px 0px aqua, -2px -2px 0px red;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 60px;
+}
+
+.home-text .type-text {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 30px;
+}
+.home-text .dev-text {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 15px;
+}
+
+.home-text .typing {
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 30px;
+}
+
+.home-text .caption-text {
+    font-family: "Sofia Sans", sans-serif;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    font-size: 25px;
+}
+
+#btn {
+    margin-top: 50px;
+    text-decoration: none;
+    display: inline-block;
+    padding: 8px 40px;
+    border-radius: 40px;
+    background: #fff;
+    color: #000;
+}
+
+/* about styling */
+.about {
+    background-color: #121212c2;
+    width: 100%;
+    height: 80vh;
+}
+
+.about-head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    color: #fff;
+}
+.about-content{
+    padding-left: 150px;
+    padding-right: 150px;
+} 
+.about-intro{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    padding-top: 40px;
+    font-family: "Sofia Sans", sans-serif;
+    font-size: 23px;
+    word-spacing: 5px;
+    white-space: pre;    
+}
+
+/* skills styling */
+
+.skills {
+    background-color: #121212;
+    /* background-color: #8B939C; */
+    width: 100%;
+    height: 100vh;
+}
+.skills-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto Mono", sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    color: #fff;
+}
+.skillsbar{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 60px;
+}
+.skillscard{
+    position: relative;
+    width: 220px;
+    height: 250px;
+    background: #1b1a1a;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+.percent{
+    position: relative;
+    width: 150px;
+    height: 150px;
+}
+.percent svg{
+    position: relative;
+    width: 150px;
+    height: 150px;
+    transform: rotate(270deg);
+}
+.percent svg circle{
+    width: 100%;
+    height: 100%;
+    fill: transparent;
+    stroke-width: 2;
+    stroke: #111111;
+    transform: translate(5px,5px);
+}
+.percent svg circle:nth-child(2){
+    stroke: var(--clr);
+    stroke-dasharray: 440;
+    stroke-dashoffset: calc(440px - (440px * var(--num))/100);
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+@keyframes fadeIn{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+.dot{
+    position: absolute;
+    inset: 5px;
+    z-index: 10;
+    transform: rotate(calc(3.6deg * var(--num)));
+    animation: animateDot 2s linear forwards;
+}
+@keyframes animateDot{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(calc(3.6deg * var(--num)));
+    }
+}
+.dot::before{
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: var(--clr);
+    box-shadow: 0 0 10px var(--clr),
+    0 0 30px var(--clr);
+}
+.percentnum{
+    position: absolute;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    animation: fadeIn 1s linear forwards;
+    animation-delay: 2.5s;
+}
+.percentnum h2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: azure;
+    font-weight: 700;
+    font-size: 2.5em;
+}
+.percentnum h2 span{
+    font-weight: 300;
+    color: azure;
+    font-size: 0.5em;
+}
+.percentnum p{
+    font-weight: 300;
+    font-size: 0.75em;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+/* footer styling */
+footer {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #000;
+    width: 100%;
+    padding: 5px 0;
+    text-align: center;
+    color: #fff;
+}
+
+footer p {
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.fotertext {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+    text-decoration: none;
+    color: #999;
+}
+
+footer i {
+    color: #fff;
+    text-decoration: none;
+}
